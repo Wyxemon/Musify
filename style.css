@@ -74,7 +74,7 @@ h1 {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 10px 1fr;
 }
 
 header div {
@@ -87,4 +87,5 @@ header div {
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-left: 10px;
 }
