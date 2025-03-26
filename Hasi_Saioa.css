@@ -1,0 +1,15 @@
+h1 {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.preaccounts button {
+    text-align: center;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border-color: white;
+    ;
+}
