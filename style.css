@@ -118,6 +118,7 @@ main {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+
 }
 
 .side-menu {
