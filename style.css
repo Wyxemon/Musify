@@ -14,7 +14,9 @@ header {
     justify-content: center;
     align-items: center;
     height: 80px;
-    
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Add a column for the close button */
+    -webkit-app-region: drag;
 }
 
 .header__button {
@@ -90,12 +92,6 @@ h1 {
     margin-left: 6px;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 10px 1fr;
-    -webkit-app-region: drag;
-}
-
 header div {
     display: flex;
     justify-content: center;
@@ -112,6 +108,7 @@ header div {
 main {
     display: grid;
     grid-template-columns: 100px 10px 1fr;
+    grid-template-rows: 1fr 100px;
     background-color: #000;
     width: 100%;
     height: calc(100vh - 80px); /* Ajusta la altura restando la del header */
@@ -195,4 +192,56 @@ iframe {
     border: none;
     border-radius: 10px;
 
+}
+
+.main-bottom {
+    width: 99vw;
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+}
+
+.bottom--menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    padding-left: 11px;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f1f3f4;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.bottom--menu img {
+    width: 80px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.bottom--menu h3 {
+    color: #333;
+}
+
+.bottom--menu div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-container {
+    background-color: #f1f3f4;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.audio-container audio {
+    background-color: transparent;
+    width: 80%;
 }
