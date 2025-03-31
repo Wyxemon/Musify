@@ -20,6 +20,7 @@ function playAudio(music) {
         }
         if (mainBottom.style.display === 'none') {
             mainBottom.style.display = 'flex';
+            mainBottom.style.animation = 'slideUp 0.1s ease-out'; // Aplica la animación
             main.style.gridTemplateRows = '1fr 200px';
         }
     } else {

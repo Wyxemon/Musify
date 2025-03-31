@@ -6,6 +6,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Nunito", sans-serif;
+    overflow: hidden;
 }
 
 header {
@@ -194,11 +195,23 @@ iframe {
 
 }
 
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .main-bottom {
     width: 99vw;
     display: none;
     background-color: #000;
     justify-content: center;
+    animation: slideUp 0.3s ease-out; /* Añade la animación */
 }
 
 .bottom--menu {
