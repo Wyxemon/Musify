@@ -1,5 +1,6 @@
 const audio = parent.document.getElementById('audio'); // Access audio from the main index.html
 const img = document.getElementById('play__img');
+
 var audioTime = 0;
 var running = 1;
 
@@ -20,4 +21,8 @@ function playAudio(music) {
         img.style = 'width: 25px; height: 20px;';
         running = 1;
     }
+}
+
+function loginMenu() {
+    window.location.href = "login/index.html";
 }
