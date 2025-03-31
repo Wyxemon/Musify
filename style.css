@@ -108,7 +108,7 @@ header div {
 main {
     display: grid;
     grid-template-columns: 100px 10px 1fr;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr auto;
     background-color: #000;
     width: 100%;
     height: calc(100vh - 80px); /* Ajusta la altura restando la del header */
@@ -196,7 +196,7 @@ iframe {
 
 .main-bottom {
     width: 99vw;
-    display: flex;
+    display: none;
     background-color: #000;
     justify-content: center;
 }
@@ -215,6 +215,7 @@ iframe {
     background-color: #f1f3f4;
     margin-left: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .bottom--menu img {
