@@ -22,6 +22,9 @@ body {
     flex-direction: column;
     padding: 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-container img {
@@ -29,7 +32,7 @@ body {
     height: 50px;
 }
 
-.login-container button {
+.login-container input, .login-container button {
     width: 100%;
     height: 50px;
     width: 350px;
@@ -42,5 +45,53 @@ body {
     margin-top: 20px;
     transition: background-color 0.3s ease;
     border: 1px solid #232323;
+    box-sizing: border-box;
+    outline: none;
 }
 
+.login-container input {
+    padding-left: 20px;
+}
+
+.login-container input:hover, .login-container input:focus {
+    background-color: #1e1e1e;
+    border-color: #2579ba;
+    color: #fff;
+}
+
+.login-container button {
+    background-color: #2579ba;
+    color: #fff;
+}
+
+.login-container button:hover {
+    background-color: #1e6aa8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container button:active {
+    background-color: #145a86;
+    transform: scale(0.98);
+}
+
+.login-container button:focus {
+    outline: 2px solid #2579ba;
+    outline-offset: 2px;
+}
+
+@media (max-width: 400px) {
+    .login-container {
+        width: 500px;
+        height: 550px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .login-container input, .login-container button {
+        width: 90%;
+    }
+}
