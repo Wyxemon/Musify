@@ -1,37 +1,56 @@
-const audio = parent.document.getElementById('audio'); // Access audio from the main index.html
+const audio = parent.document.getElementById('audio');
 const img = document.getElementById('play__img');
-const mainBottom = parent.document.getElementById('main-bottom'); // Corrected access to mainBottom
+const mainBottom = parent.document.getElementById('main-bottom');
 const main = document.getElementById('main');
 
-var audioTime = 0;
-var running = 1;
+let running = true;
 
 mainBottom.style.display = 'none';
 
-function playAudio(music) {
-    if (running == 1) {
-        if (audio.src !== music) {
-            audio.src = music;
-            audio.currentTime = audioTime;
-            img.src = "pause.png";
-            img.style = 'width: 15px; height: 15px;';
-            audio.play();
-            running = 0;
+function playAudio(...musicList) {
+    if (running) {
+        if (!audio.src || !musicList.includes(audio.src)) {
+            audio.src = musicList[Math.floor(Math.random() * musicList.length)];
         }
-        if (mainBottom.style.display === 'none') {
-            mainBottom.style.display = 'flex';
-            mainBottom.style.animation = 'slideUp 0.1s ease-out'; // Aplica la animación
-            main.style.gridTemplateRows = '1fr 200px';
-        }
+        audio.currentTime = 0;
+        toggleAudio(true);
+        audio.onended = () => playNextRandom(musicList);
+        showPlayer();
     } else {
-        audioTime = audio.currentTime.toFixed(2);
-        audio.pause();
+        toggleAudio(false);
+        hidePlayer();
+    }
+}
+
+function toggleAudio(play) {
+    if (play) {
+        img.src = "pause.png";
+        img.style = 'width: 15px; height: 15px;';
+        audio.play();
+    } else {
         img.src = "play.png";
         img.style = 'width: 25px; height: 20px;';
-        running = 1;
-        mainBottom.style.display = 'none';
-        main.style.gridTemplateRows = '1fr auto';
+        audio.pause();
+        audio.onended = null;
     }
+    running = !play;
+}
+
+function playNextRandom(musicList) {
+    audio.src = musicList[Math.floor(Math.random() * musicList.length)];
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function showPlayer() {
+    mainBottom.style.display = 'flex';
+    mainBottom.style.animation = 'slideUp 0.1s ease-out';
+    main.style.gridTemplateRows = '1fr 200px';
+}
+
+function hidePlayer() {
+    mainBottom.style.display = 'none';
+    main.style.gridTemplateRows = '1fr auto';
 }
 
 function loginMenu() {

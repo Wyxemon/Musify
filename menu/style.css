@@ -122,3 +122,7 @@ button {
     background-color: #333;
     border-radius: 10px;
 }
+
+#pop--image {
+    background-image: url('pop.jpg');
+}
