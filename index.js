@@ -10,9 +10,11 @@ let mainWindow;
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
+        title: 'Musify',
         width: 1200,
         height: 650,
         frame: false,
+        icon: __dirname + '/image/logo.png',
         webPreferences: {
         nodeIntegration: true
         }
