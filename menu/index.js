@@ -2,12 +2,14 @@ const audio = parent.document.getElementById('audio');
 const img = document.getElementById('play__img');
 const mainBottom = parent.document.getElementById('main-bottom');
 const main = document.getElementById('main');
+const imgPop = document.getElementById('play__imgPop');
+const imgAudio = document.getElementById('img--audio');
 
 let running = true;
 
 mainBottom.style.display = 'none';
 
-function playAudio(...musicList) {
+function playLofi(...musicList) {
     if (running) {
         if (!audio.src || !musicList.includes(audio.src)) {
             audio.src = musicList[Math.floor(Math.random() * musicList.length)];
@@ -24,11 +26,11 @@ function playAudio(...musicList) {
 
 function toggleAudio(play) {
     if (play) {
-        img.src = "pause.png";
+        img.src = "image/pause.png";
         img.style = 'width: 15px; height: 15px;';
         audio.play();
     } else {
-        img.src = "play.png";
+        img.src = "image/play.png";
         img.style = 'width: 25px; height: 20px;';
         audio.pause();
         audio.onended = null;
@@ -55,4 +57,34 @@ function hidePlayer() {
 
 function loginMenu() {
     window.location.href = "login/index.html";
+}
+
+function playPop(...musicList) {
+    if (running) {
+        if (!audio.src || !musicList.includes(audio.src)) {
+            audio.src = musicList[Math.floor(Math.random() * musicList.length)];
+        }
+        audio.currentTime = 0;
+        toggleAudioPop(true);
+        audio.onended = () => playNextRandom(musicList);
+        showPlayer();
+    } else {
+        toggleAudioPop(false);
+        hidePlayer();
+    }
+}
+
+
+function toggleAudioPop(play) {
+    if (play) {
+        imgPop.src = "image/pause.png";
+        imgPop.style = 'width: 15px; height: 15px;';
+        audio.play();
+    } else {
+        imgPop.src = "image/play.png";
+        imgPop.style = 'width: 25px; height: 20px;';
+        audio.pause();
+        audio.onended = null;
+    }
+    running = !play;
 }

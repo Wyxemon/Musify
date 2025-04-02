@@ -86,7 +86,7 @@ button {
     width: 100%;
     height: 180px;
     border-radius: 10px;
-    background-image: url('lofi.png');
+    background-image: url('image/lofi.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,5 +124,5 @@ button {
 }
 
 #pop--image {
-    background-image: url('pop.jpg');
+    background-image: url('image/pop.jpg');
 }

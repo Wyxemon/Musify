@@ -63,11 +63,11 @@ header input {
 }
 
 header input:hover {
-    outline: 1px solid #424242;
+    outline: 2px solid #2579ba;
 }
 
 header input:focus {
-    outline: 2px solid #ccc;
+    outline: 2px solid #2579ba;
 }
 
 .button--login {
@@ -258,4 +258,10 @@ iframe {
 .audio-container audio {
     background-color: transparent;
     width: 80%;
+}
+
+header button:hover {
+    outline: 2px solid #2579ba;
+    outline-offset: 2px;
+    border-radius: 50px;
 }
