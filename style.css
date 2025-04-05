@@ -14,10 +14,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height:75px;
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Add a column for the close button */
+    grid-template-columns: auto 1fr auto;
     -webkit-app-region: drag;
+}
+
+button {
+    cursor: pointer;
 }
 
 .header__button {
@@ -60,6 +64,7 @@ header input {
     background-size: 20px 20px;
     font-size: 14px;
     -webkit-app-region: no-drag;
+    cursor: pointer;
 }
 
 header input:hover {
@@ -67,6 +72,7 @@ header input:hover {
 }
 
 header input:focus {
+    cursor: text;
     outline: 2px solid #2579ba;
 }
 
@@ -112,7 +118,7 @@ main {
     grid-template-rows: 1fr auto;
     background-color: #000;
     width: 100%;
-    height: calc(100vh - 80px); /* Ajusta la altura restando la del header */
+    height: calc(100vh - 75px); /* Ajusta la altura restando la del header */
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
@@ -264,4 +270,24 @@ header button:hover {
     outline: 2px solid #2579ba;
     outline-offset: 2px;
     border-radius: 50px;
+}
+
+.button--skip {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button--skip img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+.button--skip:hover {
+    background-color: #e5e7e8;
 }

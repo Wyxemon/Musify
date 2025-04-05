@@ -4,7 +4,7 @@ const mainBottom = parent.document.getElementById('main-bottom');
 const main = document.getElementById('main');
 const imgPop = document.getElementById('play__imgPop');
 const imgAudio = document.getElementById('img--audio');
-
+const titleAudio = document.getElementById('h3--audio');
 let running = true;
 
 mainBottom.style.display = 'none';
@@ -68,12 +68,12 @@ function playPop(...musicList) {
         toggleAudioPop(true);
         audio.onended = () => playNextRandom(musicList);
         showPlayer();
+        titleAudio.textContent = "Pop";
     } else {
         toggleAudioPop(false);
         hidePlayer();
     }
 }
-
 
 function toggleAudioPop(play) {
     if (play) {
