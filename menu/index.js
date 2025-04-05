@@ -3,7 +3,6 @@ const img = document.getElementById('play__img');
 const mainBottom = parent.document.getElementById('main-bottom');
 const main = document.getElementById('main');
 const imgPop = document.getElementById('play__imgPop');
-const imgAudio = document.getElementById('img--audio');
 const titleAudio = document.getElementById('h3--audio');
 let running = true;
 
