@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff; /* White for better contrast */
+    margin-bottom: 20px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #1e1e1e; /* Dark card background */
+    border: 1px solid #2579ba; /* Blue border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: scale(1.05);
+}
+
+.plan-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2579ba; /* Primary blue color for titles */
+}
+
+.plan-price {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text color */
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan-features li {
+    margin: 10px 0;
+    color: #b0b0b0; /* Slightly lighter text for features */
+}
+
+.plan-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2579ba; /* Primary blue color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.plan-button:hover {
+    background-color: #1a5a8a; /* Darker blue on hover */
+}
