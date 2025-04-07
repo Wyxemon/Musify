@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.register-box input {
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+}
+
+.register-box {
+    background-color: #121212;
+    width: 500px;
+    height: 550px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box img {
+    width: 80px;
+}
+
+
+.register button {
+    margin: 60px;
+    background-color: rgb(22, 144, 160);
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    color: white;
+}
+
+body {
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Nunito", sans-serif;
+    overflow: hidden;
+}
