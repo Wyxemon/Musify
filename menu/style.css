@@ -187,14 +187,16 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    transition-property: transform, background-color;
-    transition-duration: 200ms;
+    color: #fff;
+    border: 3px solid #242424;
+    background-color: #2579ba;
+    box-sizing: border-box;
+    transition: transform 200ms, box-shadow 200ms;
 }
 
 .suscirbe div button:hover {
-    background-color: #d8cbcb;
-    color: #000;
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px #2579ba;
 }
 
 .div--box {
@@ -271,4 +273,13 @@ video {
     .ads__video {
         margin-right: 10px;
     }
+}
+
+.main button {
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.main button:active {
+    outline: 2px solid #2579ba;
 }

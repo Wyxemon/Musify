@@ -87,3 +87,7 @@ function toggleAudioPop(play) {
     }
     running = !play;
 }
+
+function qualification() {
+    window.location.href = 'login/qualification/index.html'
+}
